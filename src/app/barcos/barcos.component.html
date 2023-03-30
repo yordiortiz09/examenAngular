@@ -1,0 +1,21 @@
+<table>
+    <tr>
+      <td></td>
+      <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let row of [0,1,2,3,4,5,6,7]">
+      <td>{{row+1}}</td>
+      <td *ngFor="let col of [0,1,2,3,4,5,6,7]" (click)="handleClick(row, col)">
+        <img src="{{getShipImage(row, col)}}" />
+        
+      </td>
+      <td>{{row+1}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+      <td></td>
+    </tr>
+  </table>
+  
