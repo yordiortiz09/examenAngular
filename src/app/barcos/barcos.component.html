@@ -1,21 +1,48 @@
-<table>
-    <tr>
-      <td></td>
-      <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
-      <td></td>
-    </tr>
-    <tr *ngFor="let row of [0,1,2,3,4,5,6,7]">
-      <td>{{row+1}}</td>
-      <td *ngFor="let col of [0,1,2,3,4,5,6,7]" (click)="handleClick(row, col)">
-        <img src="{{getShipImage(row, col)}}" />
-        
-      </td>
-      <td>{{row+1}}</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
-      <td></td>
-    </tr>
-  </table>
+<div *ngIf="gameOver">
+    <h2>¡Ganaste!</h2>
+  </div>
+<div style="display: flex;">
+   
+    <table style="margin-right: 20px;">
+        <h1>JUGADOR 1</h1>
+      <tr>
+        <td></td>
+        <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let row of [0,1,2,3,4,5,6,7]">
+        <td>{{row+1}}</td>
+        <td *ngFor="let col of [0,1,2,3,4,5,6,7]" (click)="handleClick1(row, col)">
+          <img src="{{getShipImage1(row, col)}}" />
+        </td>
+        <td>{{row+1}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+        <td></td>
+      </tr>
+    </table>
+  
+    <table style="margin-left: 20px;">
+        <h1>JUGADOR 2</h1>
+      <tr>
+        <td></td>
+        <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let row of [0,1,2,3,4,5,6,7]">
+        <td>{{row+1}}</td>
+        <td *ngFor="let col of [0,1,2,3,4,5,6,7]" (click)="handleClick2(row, col)">
+          <img src="{{getShipImage2(row, col)}}" />
+        </td>
+        <td>{{row+1}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td *ngFor="let col of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{col}}</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
   

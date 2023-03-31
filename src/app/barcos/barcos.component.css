@@ -1,23 +1,23 @@
-body, table {
-    height: 90%;
-    width: 90%;
-    margin: 0;
-    padding: 0;
-    border-collapse: collapse;
+body,
+table {
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
 }
-      
-td {
-        border: 1px solid black;
 
-      }
-      td:first-of-type,
-      td:last-of-type,
-      tr:first-of-type td,
-      tr:last-of-type td {
-        width: 40px;
-        height: 40px;
-      }
-      td img {
-        width: 50px;
-        height: 50px;
-      }
+td {
+  border: 1px solid black;
+}
+td:first-of-type,
+td:last-of-type,
+tr:first-of-type td,
+tr:last-of-type td {
+  width: 40px;
+  height: 40px;
+}
+td img {
+  width: 50px;
+  height: 50px;
+}
